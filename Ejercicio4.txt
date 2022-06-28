@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class ejercicio4 {
+
+    public static void main(String [] args){
+
+        int j=0, filas, columnas;
+        filas=5;
+        columnas=4;
+        String alumnos[][] = new String[filas][columnas];
+        Scanner sc= new Scanner(System.in);
+
+        for(int i=0;i<filas;i++) {
+            System.out.println("Ingrese el nombre del alumno " + (i + 1));
+            alumnos[i][j] = sc.nextLine();
+            j++;
+            System.out.println("Ingrese el apellido del alumno " + (i + 1));
+            alumnos[i][j] = sc.nextLine();
+            j++;
+            System.out.println("Ingrese la carrera del alumno " + (i + 1));
+            alumnos[i][j] = sc.nextLine();
+            j++;
+            System.out.println("Ingrese el lugar de trabajo del alumno del alumno " + (i + 1));
+            alumnos[i][j] = sc.nextLine();
+            j=0;
+        }
+
+        System.out.println("---------------ALUMNOS---------------");
+
+        for(int i=0;i<filas;i++){
+            for(int x=0;x<columnas;x++){
+                System.out.print(alumnos[i][x] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
