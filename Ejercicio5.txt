@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class ejercicio5 {
+
+
+    public static void main(String [] args){
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese la cantidad de alumnos");
+        n = sc.nextInt();
+        String nombre[] = new String[n];
+        String resultado[] = new String[n];
+        int nota[] = new int[n];
+        for(int i=0; i<n; i++){
+            System.out.println("Ingrese el nombre del alumno");
+            nombre[i] = sc.next();
+
+            System.out.println("Ingrese la nota del alumno");
+            nota[i] = sc.nextInt();
+
+            if( nota[i] >= 60){
+                resultado[i] = "aprobado";
+            }else{
+                resultado[i] = "desaprobado";
+            }
+
+        }
+        System.out.println("-----------ALUMNOS-----------");
+        for(int i=0; i<n; i++){
+            System.out.println(nombre[i] +  " " +  nota[i] + " " + resultado[i]);
+        }
+    }
+
+}
